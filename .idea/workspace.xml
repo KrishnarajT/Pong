@@ -48,7 +48,7 @@
       <recent name="$PROJECT_DIR$/src/com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.Pong.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pong.Main" />
       <module name="Pong" />
@@ -75,8 +75,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Pong.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Pong_jar/Pong.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.Pong.jar" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MyTest" />
       </list>
