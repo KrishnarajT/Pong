@@ -13,7 +13,7 @@ public class Score extends Rectangle {
     static int GAME_HEIGHT;
     int player1Score = 0;
     int player2Score = 0;
-    Font plainFont, font;
+    public static Font plainFont, font;
 
     Score(int GAME_WIDTH, int GAME_HEIGHT) {
 

@@ -13,6 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // So fonts render properly
+        System.setProperty("awt.useSystemAAFontSettings","on");
+        System.setProperty("swing.aatext", "true");
+
         // The Game frame is basically the window
         // and we basically just call the frame. That's almost all we have to do here.
         GameFrame frame = new GameFrame();

@@ -16,8 +16,8 @@ public class GameFrame extends JFrame {
     // This frame has a constructor, and every time we call the constructor, we want it to do some stuff.
 
     GameFrame() {
+        createGamePanel();
         createMenuPanel();
-//        createGamePanel();
     }
 
     public void createMenuPanel() {
@@ -29,7 +29,6 @@ public class GameFrame extends JFrame {
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // this ususally doesnt happen, so we have to make it.
         this.pack(); // this is a mode where the frame will adjust according to the size of the panel.
-
         // and finally
         this.setVisible(true);
         this.setLocationRelativeTo(null);
@@ -42,7 +41,6 @@ public class GameFrame extends JFrame {
         this.setTitle("Pong Game");
         this.setResizable(false);
         this.setBackground(Color.black);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // this ususally doesnt happen, so we have to make it.
         this.pack(); // this is a mode where the frame will adjust according to the size of the panel.
 
         // and finally

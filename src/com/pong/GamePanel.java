@@ -35,9 +35,7 @@ public class GamePanel extends JPanel implements Runnable{
         this.setPreferredSize(SCREEN_SIZE);
 //        this.setBackground(Color.white);
 
-        // Creating the Game Thread
-        gameThread = new Thread(this);
-        gameThread.start();
+
 
     }
 
@@ -176,10 +174,20 @@ public class GamePanel extends JPanel implements Runnable{
 
     }
 
+    public void startThread(){
+        // Creating the Game Thread
+        gameThread = new Thread(this);
+        gameThread.start();
+    }
+
     // short for the action listener or listening to keys in this case coz it extends keyadapter
     public class AL extends KeyAdapter {
 
         public void keyPressed(KeyEvent e) {
+            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+                System.out.println("starting");
+                startThread();
+            }
             paddle1.keyPressed(e);
             paddle2.keyPressed(e);
 
