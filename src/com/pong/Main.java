@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
         // The Game frame is basically the window
-        // and we basically just call the frame. Thats almost all we have to do here.
+        // and we basically just call the frame. That's almost all we have to do here.
         GameFrame frame = new GameFrame();
 
     }

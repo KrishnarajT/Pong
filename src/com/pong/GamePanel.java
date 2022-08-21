@@ -90,34 +90,31 @@ public class GamePanel extends JPanel implements Runnable{
         // bounces ball off the paddles
 
         if (ball.intersects(paddle1)){
-            ball.xVelocity = Math.abs(ball.xVelocity); // this just reverses the x dir
+            ball.xVelocity = -(ball.xVelocity - 1); // this just reverses the x dir
 
             // now you can also increase the y speed, thereby now causing a change in the 2 vectors, and allowing
             // some more asymmetry
-            if (ball.yVelocity >= 0) {
+            if (ball.yVelocity >= 0 && ball.yVelocity <= 6) {
                 // ball is moving up and left
-                ball.yVelocity ++;
+                ball.yVelocity += 1;
             }
-            if (ball.yVelocity <= 0) {
-                ball.yVelocity --;
+            if (ball.yVelocity <= 0 && ball.yVelocity >= -6) {
+                ball.yVelocity -= 1;
+
             }
-
-
-            ball.setXDirection(ball.xVelocity); // redundant but fine
         }
 
         if (ball.intersects(paddle2)){
-            ball.xVelocity = - (ball.xVelocity);
+            ball.xVelocity = - (ball.xVelocity + 1);
 
-            if (ball.yVelocity >= 0) {
-                // ball is moving up and left
-                ball.yVelocity ++;
+            if (ball.yVelocity >= 0 && ball.yVelocity <= 6) {
+                // ball is moving up and right
+                ball.yVelocity += 1;
             }
-            if (ball.yVelocity <= 0) {
-                ball.yVelocity --;
+            if (ball.yVelocity <= 0 && ball.yVelocity >= -6) {
+                ball.yVelocity -= 1;
             }
 
-            ball.setXDirection(ball.xVelocity); // redundant but fine
         }
 
         // stops paddles at window edges
@@ -193,5 +190,4 @@ public class GamePanel extends JPanel implements Runnable{
             paddle2.keyReleased(e);
         }
     }
-
 }

@@ -10,13 +10,35 @@ import javax.swing.*;
 
 public class GameFrame extends JFrame {
 
-    GamePanel panel;
+    GamePanel gamePanel;
+    MenuPanel menuPanel;
 
     // This frame has a constructor, and every time we call the constructor, we want it to do some stuff.
 
     GameFrame() {
-        panel = new GamePanel();
-        this.add(panel);
+        createMenuPanel();
+//        createGamePanel();
+    }
+
+    public void createMenuPanel() {
+        int result = 0;
+
+        menuPanel = new MenuPanel();
+        this.add(menuPanel);
+        this.setTitle("Pong Game");
+        this.setResizable(false);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // this ususally doesnt happen, so we have to make it.
+        this.pack(); // this is a mode where the frame will adjust according to the size of the panel.
+
+        // and finally
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+    }
+
+
+    public void createGamePanel() {
+        gamePanel = new GamePanel();
+        this.add(gamePanel);
         this.setTitle("Pong Game");
         this.setResizable(false);
         this.setBackground(Color.black);
@@ -26,6 +48,6 @@ public class GameFrame extends JFrame {
         // and finally
         this.setVisible(true);
         this.setLocationRelativeTo(null);
-
     }
+
 }
