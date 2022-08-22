@@ -6,7 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07f640b4-5c63-4d93-a50c-21cc11692cb4" name="Changes" comment="" />
+    <list default="true" id="07f640b4-5c63-4d93-a50c-21cc11692cb4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/pong/MenuFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Pong_jar/Pong.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/MenuPanel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,21 +42,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Pong.jar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pong.Main" />
       <module name="Pong" />
@@ -81,8 +89,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.Pong.jar" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.Pong.jar" />
         <item itemvalue="Application.MyTest" />
       </list>
     </recent_temporary>
@@ -108,5 +116,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Pong$Main.ic" NAME="Main Coverage Results" MODIFIED="1661191778873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.pong.*</FILTER>
+    </SUITE>
   </component>
 </project>

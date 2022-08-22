@@ -14,7 +14,7 @@ import java.io.IOException;
 import static com.pong.GamePanel.GAME_HEIGHT;
 import static com.pong.GamePanel.SCREEN_SIZE;
 
-public class MenuPanel extends JPanel implements Runnable{
+public class MenuPanel extends JPanel{
 
 
     Thread menuThread;
@@ -42,9 +42,7 @@ public class MenuPanel extends JPanel implements Runnable{
         this.add(nameLabel);
         this.add(startButton);
         this.add(exitButton);
-        // Creating the Game Thread
-        menuThread = new Thread(this);
-        menuThread.start();
+
     }
 
     public void createFont(){
@@ -109,36 +107,17 @@ public class MenuPanel extends JPanel implements Runnable{
         exitButton.setBackground(new Color(232, 140, 140));
 
 
-        startButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Testing ok");
-                setStartButton(true);
-            }
+        startButton.addActionListener(e -> {
+            System.out.println("Starting Game");
+            Main.changeFrame(1);
         });
 
-        exitButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Testing submit");
-                System.exit(0);
-            }
+        exitButton.addActionListener(e -> {
+            Main.changeFrame(0);
         });
 
     }
 
-    public void setStartButton(boolean value){
-        if (value){
-            this.setVisible(false);
-        }
-    }
-
-    public void run() {
-        System.out.println("Testing menu");
-//        while(true){
-//            if(startButtonPressed){
-//                System.out.println("pressed that button");
-//            }
-//        }
-    }
 
     public static class AL extends KeyAdapter {
 
