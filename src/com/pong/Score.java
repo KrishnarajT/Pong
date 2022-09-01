@@ -28,7 +28,7 @@ public class Score extends Rectangle {
         try {
 
             font = Font.createFont(Font.TRUETYPE_FONT,
-                    new File("/run/media/krishnaraj/Miscellaneous/Programs/" +
+                    new File("/run/media/krishnaraj/Programs/" +
                             "Java/Pong/src/com/fonts/Calculator.ttf")).deriveFont(70f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             //register the font

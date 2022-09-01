@@ -10,19 +10,41 @@ public class Main {
 
     static GameFrame gameFrame;
     static MenuFrame menuFrame;
+    static OptionFrame optionFrame;
     public static void changeFrame(int status){
-        if(status == 1){
-            // Closing Menu Screen
-            menuFrame.setVisible(false);
-            menuFrame.dispose();
-            // Starting Game
-            gameFrame = new GameFrame();
+        /*
+        status = 1: Call Options
+        status = 2: Call GameFrame
+        status = 0: Exit Game
+         */
 
-        }
-        else if (status == 0){
-            System.out.println("Thanks for Playing! ");
-            // User Wants to Exit
-            System.exit(0);
+        switch (status) {
+            case 1 -> {
+                // Call options
+
+                menuFrame.setVisible(false);
+                menuFrame.dispose();
+
+                // Showing Options
+                optionFrame = new OptionFrame();
+            }
+            case 2 -> {
+                // Call GameFrame
+
+                // Closing Option Screen
+                optionFrame.setVisible(false);
+                optionFrame.dispose();
+
+                // Starting Game
+                gameFrame = new GameFrame();
+            }
+            default -> {
+                // Exit game
+
+                System.out.println("Thanks for Playing! ");
+                // User Wants to Exit
+                System.exit(0);
+            }
         }
 
     }

@@ -1,11 +1,8 @@
 package com.pong;
 
 import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -14,18 +11,18 @@ import java.io.IOException;
 import static com.pong.GamePanel.GAME_HEIGHT;
 import static com.pong.GamePanel.SCREEN_SIZE;
 
-public class MenuPanel extends JPanel{
+public class OptionPanel extends JPanel{
 
 
-    Thread menuThread;
+    Thread optionThread;
     JLabel titleLabel, nameLabel;// coz its runnable
-    JButton startButton;
-    JButton exitButton;
+    JButton setOneButton;
+    JButton setTwoButton;
     Font buttonFont, textFont;
 
     boolean startButtonPressed = false;
 
-    MenuPanel() {
+    OptionPanel() {
 
         // Basic Properties
         this.setFocusable(true);
@@ -40,8 +37,8 @@ public class MenuPanel extends JPanel{
 
         this.add(titleLabel);
         this.add(nameLabel);
-        this.add(startButton);
-        this.add(exitButton);
+        this.add(setOneButton);
+        this.add(setTwoButton);
 
     }
 
@@ -68,11 +65,11 @@ public class MenuPanel extends JPanel{
 
     public void createText(){
         titleLabel = new JLabel();
-        titleLabel.setText("PONG");
+        titleLabel.setText("SELECT SETS");
         titleLabel.setFont(textFont.deriveFont(110f));
         titleLabel.setAlignmentX(Box.CENTER_ALIGNMENT);
-        titleLabel.setBounds(380, 20, 400, 150);
-        
+        titleLabel.setBounds(200, 20, 800, 150);
+
         nameLabel = new JLabel();
         nameLabel.setText("Brocode & KPT GAMES");
         nameLabel.setFont(buttonFont.deriveFont(30f));
@@ -83,37 +80,39 @@ public class MenuPanel extends JPanel{
 
     public void createButtons() {
 
-        // Start button properties
-        startButton = new JButton("Start");
-        startButton.setBounds(400, 200, 200, 80);
-        startButton.setAlignmentY(Box.CENTER_ALIGNMENT);
-        startButton.setAlignmentX(Box.CENTER_ALIGNMENT);
-        startButton.setFocusPainted(false);
-        startButton.setContentAreaFilled(false);
-        startButton.setOpaque(true);
-        startButton.setBackground(new Color(232, 140, 140));
-        startButton.setFont(buttonFont);;
+        // setOne button properties
+        setOneButton = new JButton("Set of 3");
+        setOneButton.setBounds(400, 200, 200, 80);
+        setOneButton.setAlignmentY(Box.CENTER_ALIGNMENT);
+        setOneButton.setAlignmentX(Box.CENTER_ALIGNMENT);
+        setOneButton.setFocusPainted(false);
+        setOneButton.setContentAreaFilled(false);
+        setOneButton.setOpaque(true);
+        setOneButton.setBackground(new Color(232, 140, 140));
+        setOneButton.setFont(buttonFont.deriveFont(25f));;
 
 
         // Exit button properties
-        exitButton = new JButton("Exit");
-        exitButton.setAlignmentY(Box.CENTER_ALIGNMENT);
-        exitButton.setAlignmentX(Box.CENTER_ALIGNMENT);
-        exitButton.setBounds(400, 300, 200, 80);
-        exitButton.setFont(buttonFont);
-        exitButton.setFocusPainted(false);
-        exitButton.setContentAreaFilled(false);
-        exitButton.setOpaque(true);
-        exitButton.setBackground(new Color(232, 140, 140));
+        setTwoButton = new JButton("Set of 5");
+        setTwoButton.setAlignmentY(Box.CENTER_ALIGNMENT);
+        setTwoButton.setAlignmentX(Box.CENTER_ALIGNMENT);
+        setTwoButton.setBounds(400, 300, 200, 80);
+        setTwoButton.setFont(buttonFont.deriveFont(25f));
+        setTwoButton.setFocusPainted(false);
+        setTwoButton.setContentAreaFilled(false);
+        setTwoButton.setOpaque(true);
+        setTwoButton.setBackground(new Color(232, 140, 140));
 
 
-        startButton.addActionListener(e -> {
-            System.out.println("Calling Options");
-            Main.changeFrame(1);
+        setOneButton.addActionListener(e -> {
+            System.out.println("starting Game");
+            GamePanel.setSets(3);
+            Main.changeFrame(2);
         });
 
-        exitButton.addActionListener(e -> {
-            Main.changeFrame(0);
+        setTwoButton.addActionListener(e -> {
+            GamePanel.setSets(5);
+            Main.changeFrame(2);
         });
 
     }

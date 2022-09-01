@@ -12,6 +12,8 @@ public class GamePanel extends JPanel implements Runnable{
     static final int BALL_DIAMETER = 20; // in pixels
     static final int PADDLE_WIDTH = 25;
     static final int PADDLE_HEIGHT = 100;
+    public static int sets = 3;
+    public static int setCounter = 0;
 
     // declaring some objects, but not initializing them just yet.
 
@@ -25,6 +27,8 @@ public class GamePanel extends JPanel implements Runnable{
     Score score;
 
     GamePanel(){
+        System.out.println(sets);
+        System.out.println(setCounter);
         newPaddles();
         newBall();
 
@@ -90,10 +94,10 @@ public class GamePanel extends JPanel implements Runnable{
             // some more asymmetry
             if (ball.yVelocity >= 0 && ball.yVelocity <= 6) {
                 // ball is moving up and left
-                ball.yVelocity += 1;
+                ball.yVelocity += 2;
             }
             if (ball.yVelocity <= 0 && ball.yVelocity >= -6) {
-                ball.yVelocity -= 1;
+                ball.yVelocity -= 2;
 
             }
         }
@@ -101,12 +105,12 @@ public class GamePanel extends JPanel implements Runnable{
         if (ball.intersects(paddle2)){
             ball.xVelocity = - (ball.xVelocity + 1);
 
-            if (ball.yVelocity >= 0 && ball.yVelocity <= 6) {
+            if (ball.yVelocity >= 0 && ball.yVelocity <= 10) {
                 // ball is moving up and right
-                ball.yVelocity += 1;
+                ball.yVelocity += 2;
             }
-            if (ball.yVelocity <= 0 && ball.yVelocity >= -6) {
-                ball.yVelocity -= 1;
+            if (ball.yVelocity <= 0 && ball.yVelocity >= -10) {
+                ball.yVelocity -= 2;
             }
 
         }
@@ -176,6 +180,10 @@ public class GamePanel extends JPanel implements Runnable{
         gameThread.start();
     }
 
+    public static void setSets(int sets) {
+        GamePanel.sets = sets;
+    }
+
     // short for the action listener or listening to keys in this case coz it extends keyadapter
     public class AL extends KeyAdapter {
 
@@ -186,7 +194,6 @@ public class GamePanel extends JPanel implements Runnable{
             }
             paddle1.keyPressed(e);
             paddle2.keyPressed(e);
-
         }
 
         public void keyReleased(KeyEvent e) {

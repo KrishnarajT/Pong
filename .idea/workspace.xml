@@ -5,15 +5,27 @@
       <artifact name="Pong:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="07f640b4-5c63-4d93-a50c-21cc11692cb4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/pong/MenuFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pong/OptionPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pong/ScoreFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pong/ScorePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Pong_jar/Pong.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/GameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel$AL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel$AL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/MenuPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/MenuPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Score.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,31 +45,47 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///usr/lib/jvm/java-18-jdk/lib/src.zip!/java.desktop/java/awt/Font.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Dd4PUKgGJkABjXVrdErycuou5B" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/run/media/krishnaraj/Programs/Java/Pong",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/pong" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.com.pong.Main">
+    <configuration name="com.pong.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pong.Main" />
       <module name="Pong" />
       <extension name="coverage">
@@ -70,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.pong.MyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pong.MyTest" />
       <module name="Pong" />
       <extension name="coverage">
@@ -89,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.pong.Main" />
         <item itemvalue="JAR Application.Pong.jar" />
-        <item itemvalue="Application.MyTest" />
+        <item itemvalue="Application.com.pong.MyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -103,8 +131,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661015608034</updated>
+      <workItem from="1662012909139" duration="1251000" />
+      <workItem from="1662014173263" duration="793000" />
+      <workItem from="1662014977973" duration="613000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -116,6 +150,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Pong$Main.ic" NAME="Main Coverage Results" MODIFIED="1661191778873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
