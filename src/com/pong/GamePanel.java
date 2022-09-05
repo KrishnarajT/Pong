@@ -12,8 +12,9 @@ public class GamePanel extends JPanel implements Runnable{
     static final int BALL_DIAMETER = 20; // in pixels
     static final int PADDLE_WIDTH = 25;
     static final int PADDLE_HEIGHT = 100;
-    public static int sets = 3;
-    public static int setCounter = 0;
+
+    public boolean first_time = true;
+
 
     // declaring some objects, but not initializing them just yet.
 
@@ -25,10 +26,11 @@ public class GamePanel extends JPanel implements Runnable{
     Paddle paddle2; // player 2
     Ball ball;
     Score score;
+    boolean running = true;
 
     GamePanel(){
-        System.out.println(sets);
-        System.out.println(setCounter);
+        System.out.println(Score.sets);
+        System.out.println(Score.setCounter);
         newPaddles();
         newBall();
 
@@ -36,7 +38,10 @@ public class GamePanel extends JPanel implements Runnable{
         score = new Score(GAME_WIDTH, GAME_HEIGHT);
         this.setFocusable(true);
         this.addKeyListener(new AL());
+        this.setBackground(new Color(35, 145, 239));
         this.setPreferredSize(SCREEN_SIZE);
+//        this.startThread();
+
     }
 
 
@@ -132,14 +137,39 @@ public class GamePanel extends JPanel implements Runnable{
 
         // Give the player 1 point, and create a new ball
         if (ball.x <= 0){
-            score.player2Score ++;
+            score.player2Score++;
+            if(score.player2Score >= 11)
+            {
+                Score.setCounter++;
+                Score.player2SetsWon++;
+                score.player2Score = 0;
+                score.player1Score = 0;
+            }
+            if(Score.setCounter == Score.sets)
+            {
+                running = false;
+                Main.changeFrame(3);
+            }
             newPaddles();
             newBall();
             System.out.println("Player 2 Score: " + score.player2Score);
         }
 
         else if(ball.x >= GAME_WIDTH - BALL_DIAMETER){
-            score.player1Score ++;
+            score.player1Score++;
+            if(score.player1Score >= 11)
+            {
+                Score.setCounter++;
+                Score.player1SetsWon++;
+                score.player2Score = 0;
+                score.player1Score = 0;
+            }
+
+            if(Score.setCounter == Score.sets)
+            {
+                running = false;
+                Main.changeFrame(3);
+            }
             newPaddles();
             newBall();
             System.out.println("Player 1 Score: " + score.player1Score);
@@ -153,7 +183,6 @@ public class GamePanel extends JPanel implements Runnable{
         double amountOfTicks = 60.00;
         double ns = 1000000000 / amountOfTicks;
         double delta = 0;
-        boolean running = true;
 
         while(running){
             // basic game loop logic to ensure 60 fps, dont think too much about it, it makes sense.
@@ -164,10 +193,10 @@ public class GamePanel extends JPanel implements Runnable{
             lastTime = now;
 
             if(delta >= 1){
-                move();
-                checkCollision();
-                repaint();
-                delta--;
+                    move();
+                    checkCollision();
+                    repaint();
+                    delta--;
             }
 
         }
@@ -175,21 +204,23 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     public void startThread(){
+
         // Creating the Game Thread
         gameThread = new Thread(this);
         gameThread.start();
+
     }
 
     public static void setSets(int sets) {
-        GamePanel.sets = sets;
+        Score.sets = sets;
     }
-
     // short for the action listener or listening to keys in this case coz it extends keyadapter
     public class AL extends KeyAdapter {
 
         public void keyPressed(KeyEvent e) {
-            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-                System.out.println("starting");
+            if (e.getKeyCode() == KeyEvent.VK_SPACE && first_time) {
+                System.out.println("Starting Game upon Pressing Space");
+                first_time = false;
                 startThread();
             }
             paddle1.keyPressed(e);

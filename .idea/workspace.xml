@@ -9,23 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07f640b4-5c63-4d93-a50c-21cc11692cb4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/pong/OptionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pong/ScoreFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pong/ScorePanel.java" afterDir="false" />
+    <list default="true" id="07f640b4-5c63-4d93-a50c-21cc11692cb4" name="Changes" comment="changed some paths">
+      <change afterPath="$PROJECT_DIR$/src/com/pong/GameOverFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pong/GameOverPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/Ball.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/GameFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel$AL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel$AL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/GamePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/MenuPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/MenuPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pong/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/com/pong/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/com/pong/Score.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/OptionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/OptionPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Paddle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pong/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pong/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/ScoreFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pong/ScorePanel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,23 +59,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/run/media/krishnaraj/Programs/Java/Pong",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/run/media/krishnaraj/Programs/Java/Pong&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/pong" />
@@ -133,8 +133,19 @@
       <updated>1661015608034</updated>
       <workItem from="1662012909139" duration="1251000" />
       <workItem from="1662014173263" duration="793000" />
-      <workItem from="1662014977973" duration="613000" />
+      <workItem from="1662014977973" duration="1441000" />
+      <workItem from="1662016434167" duration="107000" />
+      <workItem from="1662024360659" duration="34000" />
+      <workItem from="1662403544896" duration="10710000" />
     </task>
+    <task id="LOCAL-00001" summary="changed some paths">
+      <created>1662015740151</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662015740151</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +156,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -153,6 +176,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="changed some paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed some paths" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

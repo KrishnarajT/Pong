@@ -1,11 +1,8 @@
 package com.pong;
 
 import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -14,22 +11,22 @@ import java.io.IOException;
 import static com.pong.GamePanel.GAME_HEIGHT;
 import static com.pong.GamePanel.SCREEN_SIZE;
 
-public class MenuPanel extends JPanel{
+public class GameOverPanel extends JPanel{
 
 
-    Thread menuThread;
-    JLabel titleLabel, nameLabel;// coz its runnable
-    JButton startButton;
+    Thread optionThread;
+    JLabel titleLabel, nameLabel, winnerLabel;// coz its runnable
+    JButton playAgainButton;
     JButton exitButton;
     Font buttonFont, textFont;
 
     boolean startButtonPressed = false;
 
-    MenuPanel() {
+    GameOverPanel() {
 
         // Basic Properties
         this.setFocusable(true);
-        this.addKeyListener(new AL());
+//        this.addKeyListener(new AL());
         this.setPreferredSize(SCREEN_SIZE);
         this.setBackground(new Color(210, 166, 255));
         this.setLayout(null);
@@ -40,7 +37,8 @@ public class MenuPanel extends JPanel{
 
         this.add(titleLabel);
         this.add(nameLabel);
-        this.add(startButton);
+        this.add(winnerLabel);
+        this.add(playAgainButton);
         this.add(exitButton);
 
     }
@@ -68,11 +66,21 @@ public class MenuPanel extends JPanel{
 
     public void createText(){
         titleLabel = new JLabel();
-        titleLabel.setText("PONG");
+        titleLabel.setText("GAME OVER!");
         titleLabel.setFont(textFont.deriveFont(110f));
         titleLabel.setAlignmentX(Box.CENTER_ALIGNMENT);
-        titleLabel.setBounds(380, 20, 400, 150);
-        
+        titleLabel.setBounds(200, 20, 800, 150);
+
+
+        winnerLabel = new JLabel();
+        if(Score.player1SetsWon> Score.player2SetsWon)
+            winnerLabel.setText("Player 1 Wins!");
+        else winnerLabel.setText("Player 2 Wins!");
+        winnerLabel.setFont(textFont.deriveFont(70f));
+        winnerLabel.setAlignmentX(Box.CENTER_ALIGNMENT);
+        winnerLabel.setForeground(new Color(0x318046));
+        winnerLabel.setBounds(250, 150, 800, 150);
+
         nameLabel = new JLabel();
         nameLabel.setText("Brocode & KPT GAMES");
         nameLabel.setFont(buttonFont.deriveFont(30f));
@@ -83,33 +91,33 @@ public class MenuPanel extends JPanel{
 
     public void createButtons() {
 
-        // Start button properties
-        startButton = new JButton("Start");
-        startButton.setBounds(400, 200, 200, 80);
-        startButton.setAlignmentY(Box.CENTER_ALIGNMENT);
-        startButton.setAlignmentX(Box.CENTER_ALIGNMENT);
-        startButton.setFocusPainted(false);
-        startButton.setContentAreaFilled(false);
-        startButton.setOpaque(true);
-        startButton.setBackground(new Color(246, 189, 209));
-        startButton.setFont(buttonFont);;
+        // setOne button properties
+        playAgainButton = new JButton("Play Again");
+        playAgainButton.setBounds(400, 300, 200, 80);
+        playAgainButton.setAlignmentY(Box.CENTER_ALIGNMENT);
+        playAgainButton.setAlignmentX(Box.CENTER_ALIGNMENT);
+        playAgainButton.setFocusPainted(false);
+        playAgainButton.setContentAreaFilled(false);
+        playAgainButton.setOpaque(true);
+        playAgainButton.setBackground(new Color(246, 189, 209));
+        playAgainButton.setFont(buttonFont.deriveFont(25f));;
 
 
         // Exit button properties
-        exitButton = new JButton("Exit");
+        exitButton = new JButton("Quit");
         exitButton.setAlignmentY(Box.CENTER_ALIGNMENT);
         exitButton.setAlignmentX(Box.CENTER_ALIGNMENT);
-        exitButton.setBounds(400, 300, 200, 80);
-        exitButton.setFont(buttonFont);
+        exitButton.setBounds(400, 400, 200, 80);
+        exitButton.setFont(buttonFont.deriveFont(25f));
         exitButton.setFocusPainted(false);
         exitButton.setContentAreaFilled(false);
         exitButton.setOpaque(true);
         exitButton.setBackground(new Color(246, 189, 209));
 
 
-        startButton.addActionListener(e -> {
-            System.out.println("Calling Options");
-            Main.changeFrame(1);
+        playAgainButton.addActionListener(e -> {
+            System.out.println("Opening Set Menu");
+            Main.changeFrame(4);
         });
 
         exitButton.addActionListener(e -> {
@@ -119,17 +127,17 @@ public class MenuPanel extends JPanel{
     }
 
 
-    public static class AL extends KeyAdapter {
-
-        public void keyPressed(KeyEvent e) {
-//            paddle1.keyPressed(e);
-//            paddle2.keyPressed(e);
-
-        }
-
-        public void keyReleased(KeyEvent e) {
-//            paddle1.keyReleased(e);
-//            paddle2.keyReleased(e);
-        }
-    }
+//    public static class AL extends KeyAdapter {
+//
+//        public void keyPressed(KeyEvent e) {
+////            paddle1.keyPressed(e);
+////            paddle2.keyPressed(e);
+//
+//        }
+//
+//        public void keyReleased(KeyEvent e) {
+////            paddle1.keyReleased(e);
+////            paddle2.keyReleased(e);
+//        }
+//    }
 }

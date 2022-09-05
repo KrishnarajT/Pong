@@ -28,7 +28,7 @@ public class OptionPanel extends JPanel{
         this.setFocusable(true);
         this.addKeyListener(new AL());
         this.setPreferredSize(SCREEN_SIZE);
-        this.setBackground(new Color(236, 203, 141));
+        this.setBackground(new Color(210, 166, 255));
         this.setLayout(null);
         createFont();
         createButtons();
@@ -88,7 +88,7 @@ public class OptionPanel extends JPanel{
         setOneButton.setFocusPainted(false);
         setOneButton.setContentAreaFilled(false);
         setOneButton.setOpaque(true);
-        setOneButton.setBackground(new Color(232, 140, 140));
+        setOneButton.setBackground(new Color(246, 189, 209));
         setOneButton.setFont(buttonFont.deriveFont(25f));;
 
 
@@ -101,7 +101,7 @@ public class OptionPanel extends JPanel{
         setTwoButton.setFocusPainted(false);
         setTwoButton.setContentAreaFilled(false);
         setTwoButton.setOpaque(true);
-        setTwoButton.setBackground(new Color(232, 140, 140));
+        setTwoButton.setBackground(new Color(246, 189, 209));
 
 
         setOneButton.addActionListener(e -> {

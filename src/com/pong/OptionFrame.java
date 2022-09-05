@@ -1,18 +1,16 @@
 package com.pong;
-
-;
 import javax.swing.*;
 
 // The frame is the window basically, it has the title bar and everything.
 // Panels are like frames in tkinter. They exist inside the frames, surrounded by the frames.
 
-public class ScoreFrame extends JFrame {
+public class OptionFrame extends JFrame {
 
-    ScorePanel scorePanel;
+    OptionPanel optionPanel;
 
-    ScoreFrame() {
-        scorePanel = new ScorePanel();
-        this.add(scorePanel);
+    OptionFrame() {
+        optionPanel = new OptionPanel();
+        this.add(optionPanel);
         this.setTitle("Pong Game");
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // this ususally doesnt happen, so we have to make it.
